@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Translated Menu</title>
+  <title>Choose Your Language</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background-color: #f8f8f8;
-      font-family: sans-serif;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
       text-align: center;
     }
 
@@ -17,23 +17,41 @@
       padding: 20px;
     }
 
-    iframe {
-      width: 100%;
-      height: 90vh;
-      border: none;
+    .lang-options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    a:hover {
+      background-color: #004999;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome — Multilingual Menu</h1>
-    <p>The menu below automatically adapts based on browser language via Lingva Translate.</p>
+    <h1>🌐 Select Your Language</h1>
+    <p>Click below to open the menu in your preferred language.</p>
   </header>
 
-  <!-- Lingva Translate iframe for GloriaFood menu -->
-  <iframe 
-    src="https://lingva.ml/en/https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&dine_in=true&dine_in_subtype=room_service" 
-    allowfullscreen>
-  </iframe>
+  <div class="lang-options">
+    <a href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=en" target="_blank">English</a>
+    <a href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=fr" target="_blank">Français</a>
+    <a href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=es" target="_blank">Español</a>
+    <a href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=ar" target="_blank">العربية</a>
+    <a href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=it" target="_blank">Italiano</a>
+  </div>
 </body>
 </html>
