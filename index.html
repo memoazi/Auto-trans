@@ -21,35 +21,19 @@
       width: 100%;
       height: 90vh;
       border: none;
-      position: relative;
-    }
-
-    /* Static visual mask for Google banner */
-    .banner-mask {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 40px; /* Tweak based on banner size */
-      background-color: #f8f8f8;
-      z-index: 9999;
-      pointer-events: none; /* Keeps iframe interactive */
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome — Menu in Your Language</h1>
-    <p>The menu below auto-translates to match your browser setting.</p>
+    <h1>Welcome — Multilingual Menu</h1>
+    <p>The menu below automatically adapts based on browser language via Lingva Translate.</p>
   </header>
 
-  <!-- Translated GloriaFood Menu -->
+  <!-- Lingva Translate iframe for GloriaFood menu -->
   <iframe 
-    src="https://translate.google.com/translate?hl=auto&sl=en&u=https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&dine_in=true&dine_in_subtype=room_service" 
+    src="https://lingva.ml/en/https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&dine_in=true&dine_in_subtype=room_service" 
     allowfullscreen>
   </iframe>
-
-  <!-- Mask div to obscure Google's top banner -->
-  <div class="banner-mask"></div>
 </body>
 </html>
