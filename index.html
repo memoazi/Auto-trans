@@ -3,54 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Multilingual Menu Portal</title>
+  <title>Serry Beach Resort Menu</title>
   <style>
     body {
-      margin: 0;
       font-family: sans-serif;
-      background: #f8f8f8;
+      background: #fafafa;
+      margin: 0;
+      padding: 20px;
       text-align: center;
     }
 
-    header {
-      padding: 20px;
+    .language-switch {
+      margin-bottom: 20px;
     }
 
-    .menu-button {
-      display: inline-block;
-      margin: 20px;
-      padding: 12px 24px;
+    .menu-section {
+      margin: 30px auto;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    h2 {
       background: #0066cc;
       color: white;
-      text-decoration: none;
-      border-radius: 8px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .price {
+      float: right;
       font-weight: bold;
     }
-
-    #google_translate_element {
-      margin-top: 10px;
-    }
   </style>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,ar,fr,it,es',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      }, 'google_translate_element');
-    }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-  <header>
-    <h1>🌍 Welcome to Serry Beach Resort</h1>
-    <p>This page is available in multiple languages.</p>
-    <div id="google_translate_element"></div>
-  </header>
+  <div class="language-switch">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('ar')">العربية</button>
+  </div>
 
-  <a class="menu-button" href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&dine_in=true" target="_blank">
-    🧾 Open Menu
-  </a>
+  <div id="menu-en">
+    <h2>Adventure Trips & Excursions</h2>
+    <ul>
+      <li>4 Days Nile Cruise <span class="price">5,000</span></li>
+      <li>Private City Walking Tour <span class="price">500</span></li>
+      <li>Desert Safari <span class="price">1,500</span></li>
+      <li>Diving Trips <span class="price">2,000</span></li>
+      <li>Orange Island Full Day <span class="price">1,500</span></li>
+    </ul>
+
+    <h2>Room Dine-In Request</h2>
+    <ul>
+      <li>Coffee <span class="price">1.50</span></li>
+      <li>Pepsi <span class="price">1.70</span></li>
+      <li>Lemonade <span class="price">3.00</span></li>
+    </ul>
+
+    <h2>Extras</h2>
+    <ul>
+      <li>Special Occasion Request <span class="price">10,000</span></li>
+      <li>Beauty Clinic <span class="price">15,000</span></li>
+      <li>Investment Advisory <span class="price">5,000</span></li>
+      <li>Donate to Locals <span class="price">0.00</span></li>
+      <li>Airline Ticketing <span class="price">0.00</span></li>
+    </ul>
+  </div>
+
+  <div id="menu-ar" style="display:none; direction: rtl;">
+    <h2>الرحلات والمغامرات</h2>
+    <ul>
+      <li>رحلة نيلية 4 أيام <span class="price">٥٠٠٠</span></li>
+      <li>جولة مشي خاصة في المدينة <span class="price">٥٠٠</span></li>
+      <li>سفاري الصحراء <span class="price">١٥٠٠</span></li>
+      <li>رحلات الغطس <span class="price">٢٠٠٠</span></li>
+      <li>جزيرة أورانج مع بوفيه ومياه <span class="price">١٥٠٠</span></li>
+    </ul>
+
+    <h2>طلبات الغرفة</h2>
+    <ul>
+      <li>قهوة <span class="price">١٫٥٠</span></li>
+      <li>بيبسي <span class="price">١٫٧٠</span></li>
+      <li>ليمونادة <span class="price">٣٫٠٠</span></li>
+    </ul>
+
+    <h2>خدمات إضافية</h2>
+    <ul>
+      <li>طلب مناسبة خاصة <span class="price">١٠٠٠٠</span></li>
+      <li>عيادة تجميل <span class="price">١٥٠٠٠</span></li>
+      <li>استشارات استثمارية <span class="price">٥٠٠٠</span></li>
+      <li>تبرع للسكان المحليين <span class="price">٠٫٠٠</span></li>
+      <li>حجوزات الطيران <span class="price">٠٫٠٠</span></li>
+    </ul>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.getElementById("menu-en").style.display = lang === "en" ? "block" : "none";
+      document.getElementById("menu-ar").style.display = lang === "ar" ? "block" : "none";
+    }
+  </script>
 </body>
 </html>
