@@ -57,6 +57,18 @@
       float: right;
       font-weight: bold;
     }
+
+    .order-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 24px;
+      background: #009933;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      width: fit-content;
+    }
   </style>
 </head>
 <body>
@@ -84,6 +96,7 @@
       <li>Pepsi <span class="price">1.70</span></li>
       <li>Limonade <span class="price">3.00</span></li>
     </ul>
+    <a class="order-btn" href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&dine_in=true" target="_blank">🧾 Jetzt bestellen</a>
   </div>
 
   <!-- French Menu -->
@@ -102,6 +115,7 @@
       <li>Pepsi <span class="price">1.70</span></li>
       <li>Limonade <span class="price">3.00</span></li>
     </ul>
+    <a class="order-btn" href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&dine_in=true" target="_blank">🧾 Commander maintenant</a>
   </div>
 
   <!-- Russian Menu -->
@@ -109,7 +123,7 @@
     <h2>Приключения и Экскурсии</h2>
     <ul>
       <li>Круиз по Нилу (4 дня) <span class="price">5.000</span></li>
-      <li>Пешая экскурсия <span class="price">500</span></li>
+      <li>Пешеходная экскурсия <span class="price">500</span></li>
       <li>Сафари по пустыне <span class="price">1.500</span></li>
       <li>Дайвинг-туры <span class="price">2.000</span></li>
       <li>Целый день на острове Оранж <span class="price">1.500</span></li>
@@ -120,17 +134,15 @@
       <li>Пепси <span class="price">1.70</span></li>
       <li>Лимонад <span class="price">3.00</span></li>
     </ul>
+    <a class="order-btn" href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&dine_in=true" target="_blank">🧾 Заказать сейчас</a>
   </div>
 
   <script>
     function showMenu(lang) {
-      document.querySelectorAll('.menu').forEach(menu => {
-        menu.style.display = 'none';
-      });
+      document.querySelectorAll('.menu').forEach(menu => menu.style.display = 'none');
       document.getElementById('menu-' + lang).style.display = 'block';
     }
-
-    showMenu('de'); // default
+    showMenu('de'); // default view
   </script>
 </body>
 </html>
