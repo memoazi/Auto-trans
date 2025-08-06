@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: sans-serif;
-      background: #fafafa;
+      background-color: #f2f2f2;
       margin: 0;
       padding: 20px;
       text-align: center;
@@ -17,14 +17,25 @@
       margin-bottom: 20px;
     }
 
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      background-color: #0066cc;
+      color: white;
+      border-radius: 5px;
+    }
+
     .menu-section {
-      margin: 30px auto;
+      margin: 20px auto;
       max-width: 600px;
       text-align: left;
     }
 
     h2 {
-      background: #0066cc;
+      background-color: #0066cc;
       color: white;
       padding: 10px;
       border-radius: 5px;
@@ -36,81 +47,34 @@
     }
 
     li {
-      padding: 10px;
+      padding: 8px;
       border-bottom: 1px solid #ccc;
+      font-size: 16px;
     }
 
     .price {
       float: right;
       font-weight: bold;
     }
+
+    #menu-ru, #menu-fr, #menu-de {
+      display: none;
+    }
+
+    #menu-ru { direction: rtl; text-align: right; }
   </style>
 </head>
 <body>
   <div class="language-switch">
-    <button onclick="switchLang('en')">English</button>
-    <button onclick="switchLang('ar')">العربية</button>
+    <button onclick="switchLang('de')">Deutsch</button>
+    <button onclick="switchLang('fr')">Français</button>
+    <button onclick="switchLang('ru')">Русский</button>
   </div>
 
-  <div id="menu-en">
-    <h2>Adventure Trips & Excursions</h2>
+  <div id="menu-de">
+    <h2>Abenteuer & Ausflüge</h2>
     <ul>
-      <li>4 Days Nile Cruise <span class="price">5,000</span></li>
-      <li>Private City Walking Tour <span class="price">500</span></li>
-      <li>Desert Safari <span class="price">1,500</span></li>
-      <li>Diving Trips <span class="price">2,000</span></li>
-      <li>Orange Island Full Day <span class="price">1,500</span></li>
-    </ul>
-
-    <h2>Room Dine-In Request</h2>
-    <ul>
-      <li>Coffee <span class="price">1.50</span></li>
-      <li>Pepsi <span class="price">1.70</span></li>
-      <li>Lemonade <span class="price">3.00</span></li>
-    </ul>
-
-    <h2>Extras</h2>
-    <ul>
-      <li>Special Occasion Request <span class="price">10,000</span></li>
-      <li>Beauty Clinic <span class="price">15,000</span></li>
-      <li>Investment Advisory <span class="price">5,000</span></li>
-      <li>Donate to Locals <span class="price">0.00</span></li>
-      <li>Airline Ticketing <span class="price">0.00</span></li>
-    </ul>
-  </div>
-
-  <div id="menu-ar" style="display:none; direction: rtl;">
-    <h2>الرحلات والمغامرات</h2>
-    <ul>
-      <li>رحلة نيلية 4 أيام <span class="price">٥٠٠٠</span></li>
-      <li>جولة مشي خاصة في المدينة <span class="price">٥٠٠</span></li>
-      <li>سفاري الصحراء <span class="price">١٥٠٠</span></li>
-      <li>رحلات الغطس <span class="price">٢٠٠٠</span></li>
-      <li>جزيرة أورانج مع بوفيه ومياه <span class="price">١٥٠٠</span></li>
-    </ul>
-
-    <h2>طلبات الغرفة</h2>
-    <ul>
-      <li>قهوة <span class="price">١٫٥٠</span></li>
-      <li>بيبسي <span class="price">١٫٧٠</span></li>
-      <li>ليمونادة <span class="price">٣٫٠٠</span></li>
-    </ul>
-
-    <h2>خدمات إضافية</h2>
-    <ul>
-      <li>طلب مناسبة خاصة <span class="price">١٠٠٠٠</span></li>
-      <li>عيادة تجميل <span class="price">١٥٠٠٠</span></li>
-      <li>استشارات استثمارية <span class="price">٥٠٠٠</span></li>
-      <li>تبرع للسكان المحليين <span class="price">٠٫٠٠</span></li>
-      <li>حجوزات الطيران <span class="price">٠٫٠٠</span></li>
-    </ul>
-  </div>
-
-  <script>
-    function switchLang(lang) {
-      document.getElementById("menu-en").style.display = lang === "en" ? "block" : "none";
-      document.getElementById("menu-ar").style.display = lang === "ar" ? "block" : "none";
-    }
-  </script>
-</body>
-</html>
+      <li>4-tägige Nilkreuzfahrt <span class="price">5.000</span></li>
+      <li>Private Stadtrundgang <span class="price">500</span></li>
+      <li>Wüstensafari <span class="price">1.500</span></li>
+      <li>Tauchgänge <span class="price">2.000</span></
