@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Choose Your Language</title>
+  <title>Select Your Language</title>
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      font-family: sans-serif;
       text-align: center;
     }
 
@@ -17,41 +17,68 @@
       padding: 20px;
     }
 
-    .lang-options {
+    .flags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .flag-button {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    a {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #0066cc;
-      color: white;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
+      color: #333;
+      width: 100px;
     }
 
-    a:hover {
-      background-color: #004999;
+    .flag-button img {
+      width: 80px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    .flag-button:hover img {
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>🌐 Select Your Language</h1>
-    <p>Click below to open the menu in your preferred language.</p>
+    <h1>🌍 Choose Your Language</h1>
+    <p>Tap your flag to view the menu in your language.</p>
   </header>
 
-  <div class="lang-options">
-    <a href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=en" target="_blank">English</a>
-    <a href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=fr" target="_blank">Français</a>
-    <a href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=es" target="_blank">Español</a>
-    <a href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=ar" target="_blank">العربية</a>
-    <a href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=it" target="_blank">Italiano</a>
+  <div class="flags">
+    <a class="flag-button" href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=en" target="_blank">
+      <img src="https://flagcdn.com/w80/gb.png" alt="English" />
+      English
+    </a>
+
+    <a class="flag-button" href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=fr" target="_blank">
+      <img src="https://flagcdn.com/w80/fr.png" alt="Français" />
+      Français
+    </a>
+
+    <a class="flag-button" href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=es" target="_blank">
+      <img src="https://flagcdn.com/w80/es.png" alt="Español" />
+      Español
+    </a>
+
+    <a class="flag-button" href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=ar" target="_blank">
+      <img src="https://flagcdn.com/w80/eg.png" alt="العربية" />
+      العربية
+    </a>
+
+    <a class="flag-button" href="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&lang=it" target="_blank">
+      <img src="https://flagcdn.com/w80/it.png" alt="Italiano" />
+      Italiano
+    </a>
   </div>
 </body>
 </html>
