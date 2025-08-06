@@ -3,58 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Auto-trans</title>
+  <title>Translated Menu</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      font-family: sans-serif;
       text-align: center;
-      padding: 30px;
-      background-color: #f4f4f4;
     }
-    h1 {
-      color: #333;
+
+    header {
+      padding: 20px;
     }
+
     iframe {
       width: 100%;
-      height: 800px;
+      height: 90vh;
       border: none;
-      margin-top: 20px;
+      position: relative;
+    }
+
+    /* Static visual mask for Google banner */
+    .banner-mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px; /* Tweak based on banner size */
+      background-color: #f8f8f8;
+      z-index: 9999;
+      pointer-events: none; /* Keeps iframe interactive */
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Auto-trans</h1>
-  <p>This is your GitHub Pages site powered by <strong>index.html</strong>.</p>
+  <header>
+    <h1>Welcome — Menu in Your Language</h1>
+    <p>The menu below auto-translates to match your browser setting.</p>
+  </header>
 
-  <!-- Embedded FoodBooking Menu -->
+  <!-- Translated GloriaFood Menu -->
   <iframe 
-    src="https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&dine_in=true&dine_in_subtype=room_service" 
+    src="https://translate.google.com/translate?hl=auto&sl=en&u=https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=25220e81-58a3-4cf3-8684-bee280466c19&dine_in=true&dine_in_subtype=room_service" 
     allowfullscreen>
   </iframe>
 
-  <!-- Auto Google Translate based on browser language -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      const userLang = navigator.language || navigator.userLanguage;
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,ar,fr,de,es,it,ru,zh',
-        autoDisplay: false
-      }, 'google_translate_element');
-
-      // Simulate auto-translation
-      const langCode = userLang.split('-')[0];
-      const interval = setInterval(() => {
-        const select = document.querySelector('.goog-te-combo');
-        if (select) {
-          select.value = langCode;
-          select.dispatchEvent(new Event('change'));
-          clearInterval(interval);
-        }
-      }, 500);
-    }
-  </script>
-  <div id="google_translate_element" style="display:none;"></div>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- Mask div to obscure Google's top banner -->
+  <div class="banner-mask"></div>
 </body>
 </html>
