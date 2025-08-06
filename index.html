@@ -61,23 +61,23 @@
 </head>
 <body>
   <h1>🌍 Serry Beach Resort Menu</h1>
+
   <div class="lang-buttons">
     <button onclick="showMenu('de')">Deutsch</button>
     <button onclick="showMenu('fr')">Français</button>
     <button onclick="showMenu('ru')">Русский</button>
   </div>
 
-  <!-- GERMAN MENU -->
+  <!-- German Menu -->
   <div id="menu-de" class="menu">
     <h2>Abenteuer & Ausflüge</h2>
     <ul>
       <li>4-tägige Nilkreuzfahrt <span class="price">5.000</span></li>
-      <li>Private Stadttour zu Fuß <span class="price">500</span></li>
+      <li>Stadtrundgang <span class="price">500</span></li>
       <li>Wüstensafari <span class="price">1.500</span></li>
       <li>Tauchgänge <span class="price">2.000</span></li>
-      <li>Orange-Insel – Ganztägig <span class="price">1.500</span></li>
+      <li>Ganztag Orange-Insel <span class="price">1.500</span></li>
     </ul>
-
     <h2>Zimmerservice</h2>
     <ul>
       <li>Kaffee <span class="price">1.50</span></li>
@@ -86,17 +86,16 @@
     </ul>
   </div>
 
-  <!-- FRENCH MENU -->
+  <!-- French Menu -->
   <div id="menu-fr" class="menu">
     <h2>Excursions & Aventures</h2>
     <ul>
-      <li>Croisière sur le Nil de 4 jours <span class="price">5.000</span></li>
-      <li>Visite privée à pied de la ville <span class="price">500</span></li>
+      <li>Croisière sur le Nil (4 jours) <span class="price">5.000</span></li>
+      <li>Visite privée à pied <span class="price">500</span></li>
       <li>Safari dans le désert <span class="price">1.500</span></li>
-      <li>Plongée sous-marine <span class="price">2.000</span></li>
-      <li>Journée complète à l'île Orange <span class="price">1.500</span></li>
+      <li>Sorties plongée <span class="price">2.000</span></li>
+      <li>Journée île Orange <span class="price">1.500</span></li>
     </ul>
-
     <h2>Service en chambre</h2>
     <ul>
       <li>Café <span class="price">1.50</span></li>
@@ -105,17 +104,16 @@
     </ul>
   </div>
 
-  <!-- RUSSIAN MENU -->
+  <!-- Russian Menu -->
   <div id="menu-ru" class="menu" style="direction: rtl; text-align: right;">
-    <h2>Приключения и экскурсии</h2>
+    <h2>Приключения и Экскурсии</h2>
     <ul>
       <li>Круиз по Нилу (4 дня) <span class="price">5.000</span></li>
-      <li>Пешеходная экскурсия по городу <span class="price">500</span></li>
+      <li>Пешая экскурсия <span class="price">500</span></li>
       <li>Сафари по пустыне <span class="price">1.500</span></li>
-      <li>Дайвинг-тур <span class="price">2.000</span></li>
-      <li>Остров Оранж — полный день <span class="price">1.500</span></li>
+      <li>Дайвинг-туры <span class="price">2.000</span></li>
+      <li>Целый день на острове Оранж <span class="price">1.500</span></li>
     </ul>
-
     <h2>Обслуживание номеров</h2>
     <ul>
       <li>Кофе <span class="price">1.50</span></li>
@@ -126,11 +124,13 @@
 
   <script>
     function showMenu(lang) {
-      document.querySelectorAll('.menu').forEach(m => m.style.display = 'none');
+      document.querySelectorAll('.menu').forEach(menu => {
+        menu.style.display = 'none';
+      });
       document.getElementById('menu-' + lang).style.display = 'block';
     }
 
-    showMenu('de'); // Default
+    showMenu('de'); // default
   </script>
 </body>
 </html>
